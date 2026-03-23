@@ -115,9 +115,13 @@ function RelatedLookCard({ lookEntry }: { lookEntry: LookEntry }) {
   )
 }
 
-/* ── Commit log — git-style version history ── */
+/* ── Atelier revision log — design-process history ── */
 function CommitLog({ article }: { article: EditorialArticle }) {
-  const revisions = article.revisionHistory ?? []
+  const revisions = [...(article.revisionHistory ?? [])].sort(
+    (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
+  )
+  const firstRevision = revisions[0]
+  const latestRevision = revisions[revisions.length - 1]
   return (
     <aside
       className="rounded-xl overflow-hidden"
@@ -133,35 +137,51 @@ function CommitLog({ article }: { article: EditorialArticle }) {
         <span className="w-2.5 h-2.5 rounded-full bg-[#FFBD2E]" />
         <span className="w-2.5 h-2.5 rounded-full bg-[#28C840]" />
         <span className="ml-2 text-[0.48rem] uppercase tracking-[0.22em] text-white/35">
-          revision history
+          atelier revision record
         </span>
       </div>
 
       <div className="p-4 space-y-0">
-        {/* Repo metadata */}
+        {/* Process metadata */}
         <div className="mb-4 pb-3 border-b border-white/10">
           <p className="text-[0.52rem] text-[#7dd3fc] mb-0.5">
-            $ git log --oneline {article.slug}
+            design-thread/{article.slug}
           </p>
           <p className="text-[0.48rem] text-white/30 mt-1">
-            branch: <span className="text-[#86efac]">main</span>
+            stage: <span className="text-[#86efac]">atelier-main</span>
             {(article.forkCount ?? 0) > 0 && (
               <>
                 {' '}·{' '}
                 <span className="text-[#fbbf24]">
-                  {article.forkCount} fork{(article.forkCount ?? 0) !== 1 ? 's' : ''}
+                  {article.forkCount} variant{(article.forkCount ?? 0) !== 1 ? 's' : ''}
                 </span>
               </>
             )}
           </p>
         </div>
 
-        {/* Commits — newest last (chronological) */}
+        {/* Growth summary */}
+        {revisions.length > 0 && (
+          <div className="mb-4 pb-3 border-b border-white/10">
+            <p className="text-[0.46rem] uppercase tracking-[0.18em] text-white/35 mb-1.5">
+              Evolution arc
+            </p>
+            <p className="text-[0.5rem] text-white/70 leading-[1.6]">
+              {formatShortDate(firstRevision.date)} to {formatShortDate(latestRevision.date)}
+              {' '}· {revisions.length} recorded edit pass{revisions.length !== 1 ? 'es' : ''}
+            </p>
+            <p className="text-[0.46rem] text-white/35 mt-1">
+              Readers can trace how the narrative, references, and tailoring notes evolved over time.
+            </p>
+          </div>
+        )}
+
+        {/* Revisions — oldest to newest for growth tracking */}
         {revisions.length === 0 ? (
           <p className="text-[0.5rem] text-white/30 italic">No revision history.</p>
         ) : (
           <div className="space-y-3">
-            {[...revisions].reverse().map((rev, i) => (
+            {revisions.map((rev, i) => (
               <motion.div
                 key={rev.hash}
                 initial={{ opacity: 0, x: -8 }}
@@ -169,13 +189,16 @@ function CommitLog({ article }: { article: EditorialArticle }) {
                 transition={{ delay: i * 0.07, duration: 0.35 }}
                 className="relative pl-4"
               >
-                {/* Commit line decoration */}
+                {/* Revision line decoration */}
                 <div className="absolute left-0 top-[6px] bottom-0 w-px bg-white/15" />
                 <div className="absolute left-[-3px] top-[4px] w-[7px] h-[7px] rounded-full border border-[#7dd3fc] bg-[#0d0d0d]" />
 
                 <div className="flex items-baseline gap-2 flex-wrap mb-0.5">
                   <span className="text-[0.5rem] text-[#f97316] font-bold tracking-wider">
                     {rev.hash}
+                  </span>
+                  <span className="text-[0.42rem] text-white/35 uppercase tracking-[0.14em]">
+                    Rev {String(i + 1).padStart(2, '0')}
                   </span>
                   <span className="text-[0.44rem] text-[#86efac] uppercase tracking-wider">
                     {rev.version}
@@ -198,10 +221,10 @@ function CommitLog({ article }: { article: EditorialArticle }) {
         {/* Footer */}
         <div className="mt-4 pt-3 border-t border-white/10">
           <p className="text-[0.46rem] text-white/25 leading-[1.7]">
-            {revisions.length} commit{revisions.length !== 1 ? 's' : ''} on record
+            {revisions.length} revision{revisions.length !== 1 ? 's' : ''} on record
             <br />
             <span className="text-white/15">
-              KESTRA PROTOCOL · editorial record system
+              KESTRA PROTOCOL · atelier process record
             </span>
           </p>
         </div>

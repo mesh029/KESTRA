@@ -80,7 +80,7 @@ export function ProjectTimeline({ logEntries }: ProjectTimelineProps) {
       </div>
 
       {/* ── Timeline entries ─────────────────────────────────────── */}
-      <div className="kestra-prose py-10 sm:py-14 lg:py-16">
+      <div className="kestra-prose py-12 sm:py-16 lg:py-20">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeFilter}
@@ -101,7 +101,7 @@ export function ProjectTimeline({ logEntries }: ProjectTimelineProps) {
             ) : (
               /* Each entry is separated by generous vertical space only —
                  no heavy black rule dividers that cramp the text. */
-              <div className="space-y-10 sm:space-y-14">
+              <div className="space-y-14 sm:space-y-16">
                 {filteredEntries.map((entry) => (
                   <LogEntryRow key={entry.entryId} logEntry={entry} />
                 ))}

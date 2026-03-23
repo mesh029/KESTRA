@@ -7,7 +7,7 @@ import { seedLogEntries } from '@/lib/log/seedLog'
 export const metadata: Metadata = {
   title: 'Process Journal — KESTRA PROTOCOL',
   description:
-    'The making of KESTRA PROTOCOL — a chronological record of design, construction, editorial, and technical decisions. Unfiltered.',
+    'The making of KESTRA PROTOCOL — a chronological record of look design, construction, editorial direction, and atelier decisions.',
 }
 
 export default function LogPage() {
@@ -36,8 +36,8 @@ export default function LogPage() {
             Process Journal
           </h1>
           <p className="font-sans text-[0.9375rem] text-muted max-w-md leading-relaxed">
-            A raw, chronological record of design decisions, construction progress,
-            editorial work, and platform development.
+            A raw, chronological record of look design decisions, construction progress,
+            fittings, fabric choices, and editorial direction.
           </p>
 
           {/* Stats */}

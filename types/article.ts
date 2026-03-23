@@ -7,8 +7,8 @@ export type ArticleCategory =
   | 'Field Notes'
 
 /**
- * A single commit in the article's revision history.
- * Displayed as a git-style commit log in the article detail page.
+ * A single design/edit pass in the article's evolution history.
+ * Displayed as an atelier revision timeline in the article detail page.
  */
 export interface ArticleRevision {
   /** 7-char deterministic hash — used as a unique display key */
@@ -17,7 +17,7 @@ export interface ArticleRevision {
   version: string
   /** ISO 8601 publication or revision date */
   date: string
-  /** Short commit message describing what changed */
+  /** Short note describing what changed in this edit pass */
   message: string
   /** Name of the person responsible for this revision */
   author: string
@@ -49,8 +49,8 @@ export interface EditorialArticle {
    * Used to render linked Look cards inside the article.
    */
   relatedLooks?: string[]
-  /** Chronological revision history, newest last */
+  /** Chronological revision history, oldest first */
   revisionHistory?: ArticleRevision[]
-  /** Number of studio adaptations forked from this article */
+  /** Number of studio adaptations/variants derived from this article */
   forkCount?: number
 }
