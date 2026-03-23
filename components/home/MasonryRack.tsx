@@ -145,6 +145,7 @@ export function MasonryRack({ looks, indexOffset = 1 }: MasonryRackProps) {
                   aspectRatio={aspectRatio}
                   colDelay={colIdx * 0.07}
                   fillHeight={isLast}
+                  characterBadge={!!look.editorialStory.characterInspiration}
                 />
               </div>
             )

@@ -29,6 +29,8 @@ interface LookRackCardProps {
    * so it stretches to eliminate bottom-edge white space.
    */
   fillHeight?: boolean
+  /** When true renders a CHARACTER badge — used for cosplay/anime looks */
+  characterBadge?: boolean
 }
 
 export function LookRackCard({
@@ -37,6 +39,7 @@ export function LookRackCard({
   aspectRatio = '3/4',
   colDelay = 0,
   fillHeight = false,
+  characterBadge = false,
 }: LookRackCardProps) {
   // Initialise as true if this URL was already loaded in this session
   const [imgLoaded, setImgLoaded] = useState(() => loadedImageUrls.has(look.heroImageUrl))
@@ -71,11 +74,8 @@ export function LookRackCard({
     >
       <Link
         href={`/looks/${look.lookSlug}`}
-        className="group block relative overflow-hidden bg-surface rounded-xl"
-        style={{
-          ...(fillHeight ? { height: '100%' } : { aspectRatio }),
-          boxShadow: '0 4px 20px rgba(0,0,0,0.10), 0 1px 4px rgba(0,0,0,0.06)',
-        }}
+        className="group block relative overflow-hidden bg-surface"
+        style={fillHeight ? { height: '100%' } : { aspectRatio }}
         aria-label={`View Look ${num}: ${look.lookTitle}`}
       >
         {/* ── Skeleton shimmer shown while image loads ── */}
@@ -111,14 +111,19 @@ export function LookRackCard({
         {/* ── Bottom gradient — standardized legibility tier ── */}
         <div className="absolute inset-x-0 bottom-0 h-[65%] scrim-standard z-[2]" />
 
-        {/* ── Sold-out badge ── */}
-        {isSoldOut && (
-          <div className="absolute top-4 left-4 z-[3]">
-            <span className="font-mono text-[0.46rem] uppercase tracking-[0.2em] text-white/65 bg-black/45 backdrop-blur-sm px-2.5 py-1.5 rounded-full">
+        {/* ── Badges row ── */}
+        <div className="absolute top-3 left-3 z-[3] flex flex-col gap-1.5">
+          {characterBadge && (
+            <span className="font-mono text-[0.4rem] uppercase tracking-[0.22em] bg-[#1a1a2e] text-[#a78bfa] border border-[#a78bfa]/30 px-2 py-1 backdrop-blur-sm">
+              Character
+            </span>
+          )}
+          {isSoldOut && (
+            <span className="font-mono text-[0.46rem] uppercase tracking-[0.2em] text-white/65 bg-black/45 backdrop-blur-sm px-2.5 py-1.5">
               Sold Out
             </span>
-          </div>
-        )}
+          )}
+        </div>
 
         {/* ── Caption band ──
              px-6 pb-8 keeps text well clear of the rounded-xl 12px corner curves.

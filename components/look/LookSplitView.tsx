@@ -198,7 +198,7 @@ export function LookSplitView({ lookEntry }: LookSplitViewProps) {
         <SiteFooter />
 
         {/* Fixed bottom purchase bar — above everything */}
-        <div className="fixed bottom-0 left-0 right-0 z-50 bg-paper-white border-t border-void-black">
+        <div className="fixed bottom-0 left-0 right-0 z-50 bg-paper-white border-t border-void-black pb-safe-bottom">
           <div className="flex items-center gap-4 px-5 py-3">
             <div className="flex-1">
               <p className="font-mono text-[0.5rem] uppercase tracking-[0.18em] text-steel-grey">
@@ -221,7 +221,7 @@ export function LookSplitView({ lookEntry }: LookSplitViewProps) {
             </button>
           </div>
           {/* Safe area spacer for devices with home bars */}
-          <div className="h-safe-area-inset-bottom bg-paper-white" />
+          <div className="h-safe-bottom bg-paper-white" />
         </div>
       </div>
 

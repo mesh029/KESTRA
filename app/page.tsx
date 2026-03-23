@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 import { getAllLooks } from '@/lib/looks/getAllLooks'
 import { MagazineNav } from '@/components/layout/MagazineNav'
 import { SiteFooter } from '@/components/SiteFooter'
-import { MasonryRack } from '@/components/home/MasonryRack'
+import { CollectionRack } from '@/components/home/CollectionRack'
 import { EditorialFeed } from '@/components/home/EditorialFeed'
 import { seedArticles } from '@/lib/articles/seed'
 
@@ -134,27 +134,9 @@ export default async function HomePage() {
         )}
 
         {/* ═══════════════════════════════════════════════════════════════
-            LOOK RACK — Grid of remaining looks
+            COLLECTION RACK — Categorised look grid
         ═══════════════════════════════════════════════════════════════ */}
-        {rack.length > 0 && (
-          <section className="bg-paper section-md" aria-label="All looks">
-            <div className="kestra-wrap">
-
-              {/* ── Section header ── */}
-              <div className="flex items-baseline justify-between pb-5 mb-6 sm:mb-8 border-b border-line">
-                <h2 className="font-mono text-[0.56rem] uppercase tracking-[0.28em] text-muted">
-                  AW 2026 — Full Collection
-                </h2>
-                <span className="font-mono text-[0.5rem] text-muted tabular-nums">
-                  {looks.length} {looks.length === 1 ? 'Look' : 'Looks'}
-                </span>
-              </div>
-
-              {/* ── Pinterest-style masonry rack ── */}
-              <MasonryRack looks={rack} indexOffset={1} />
-            </div>
-          </section>
-        )}
+        {rack.length > 0 && <CollectionRack looks={rack} />}
 
         {/* ═══════════════════════════════════════════════════════════════
             EDITORIAL FEED — Articles, trends, process, culture

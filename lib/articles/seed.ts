@@ -382,4 +382,85 @@ Light is gone. The wall has turned ordinary. Pack down.
 
 The Karen shoot is the easiest kind of editorial to make: the location does most of the work. The difficulty is getting there early enough to deserve it.`,
   },
+
+  /* ── 008 · CHARACTER ────────────────────────────────────────────── */
+  {
+    articleId: 'article-008-the-archetype-protocol',
+    slug: 'the-archetype-protocol',
+    category: 'Character',
+    headline: 'The Archetype Protocol',
+    teaser:
+      'The sharpest dressers in any universe have always been fictional. What KESTRA borrows from the Ronin, the Oracle, and the Operative — and why character logic makes the best design brief.',
+    coverImageUrl:
+      'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=1400&q=90&auto=format&fit=crop',
+    coverImageAlt:
+      'Dramatic editorial silhouette — structured coat against high-contrast light',
+    readingTimeMin: 6,
+    publishedAt: '2026-03-23T08:00:00Z',
+    author: 'Wanjiku Mwangi',
+    relatedLooks: ['ghost-meridian', 'full-cowl', 'arid-geometry', 'night-latitude'],
+    forkCount: 7,
+    revisionHistory: [
+      {
+        hash: 'e2b7f94',
+        version: 'v1.0',
+        date: '2026-03-23T08:00:00Z',
+        message: 'Initial publication — Ronin, Oracle, Operative archetypes mapped to AW 2026',
+        author: 'Wanjiku Mwangi',
+      },
+      {
+        hash: 'a5c1d38',
+        version: 'v1.1',
+        date: '2026-03-26T11:00:00Z',
+        message: 'Added Operative brief and Indigo Latitude construction crossref',
+        author: 'Grace Otieno',
+      },
+      {
+        hash: 'c9f3b21',
+        version: 'v1.2',
+        date: '2026-03-30T14:00:00Z',
+        message: 'Expanded Afrofuturist Griot section; added Nairobi anime culture context',
+        author: 'Kefilwe Nkosi',
+      },
+    ],
+    body: `The fictional character is the purest design brief you will ever receive.
+
+Tell a designer: make something for a shadow operative who moves between cities and never needs to explain what they do — and watch what they build. The garment that answers that brief has no wasted information. Every decision serves the person it was made for, even though that person does not exist.
+
+This is why KESTRA treats character archetypes as a serious design methodology. Not cosplay. Not costume. Design logic borrowed from the clearest, most resolved versions of a human type.
+
+## The Ronin Brief
+
+A Ronin has no lord. They travel light. Their garments need to function in motion and read with authority when still. The coat is the primary garment — not outerwear, not an accessory, but the statement itself. It must work in wind and it must work in a doorway.
+
+The Arid Geometry coat was designed against this brief, partially. Wide shoulder, structured chest, Molo wool at 380 GSM. It does not apologise for taking up space. When the Ronin stops moving, the coat makes the argument for them. The silhouette is the communication.
+
+Nairobi has always understood the Ronin. The city is full of people who move between registers — formal and street, Kiswahili and English, tailored and mechanical — without losing coherence. The coat that travels with them needs to match that range.
+
+## The Oracle Brief
+
+The Oracle knows things. They communicate this through restraint, not display. The silhouette is elongated. The palette is narrow — one or two tones, no competition for the eye. The fabric is the story.
+
+The Night Latitude slip dress answers this brief. Washed silk charmeuse at 75 GSM, bias cut, no structural intervention beyond the crossing back strap. The garment has decided to be subtle in a room where nothing else has. That is power. The Oracle does not explain. The garment does not explain.
+
+In Kenyan Afrofuturist tradition, the Griot — the keeper and performer of collective memory — is this archetype. They dress to be trusted, not to impress. Every textile choice signals knowledge, not status.
+
+## The Operative Brief
+
+The Operative works. The garment must move, conceal, and survive. Technical construction — flat-felled seams, internal channel pockets, nothing that catches on a doorframe — combined with a silhouette that reads as civilian at a distance.
+
+The Indigo Latitude jacket: unlined, Hong Kong-bound seams, natural indigo on cotton. At distance it is a jacket. Up close, every decision was made to last and to function under real conditions. The blue deepens with wear. The garment improves with use. The Operative values things that improve with use.
+
+## The Afrofuturist Character: Why This Matters Now
+
+Nairobi's creative culture is deeply influenced by anime, manga, and cinematic universes. Walk through Westlands on a weekend and you will find people dressed with the precision and intentionality of fictional characters — specific silhouettes, considered layering, garments chosen because they match an internal sense of who the wearer is in the world.
+
+This is character logic. It is not imitation. It is using the precision of fiction as a design constraint applied to real life.
+
+## Why Character Logic Works
+
+The brief from a fictional character is better than the brief from an abstract "customer" because fictional characters are internally consistent. Their values, their movement, their environment, their needs — these are fixed. You can design for them without negotiating.
+
+The best garment is the one that was made for someone specific, even if that someone lives in a story. KESTRA AW 2026 is not a cosplay collection. It is a collection built from character logic — where each piece has a fixed reason for every decision, and the reason is narrative.`,
+  },
 ]

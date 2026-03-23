@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import type { LookEntry } from '@/types/look'
 import { MpesaPurchaseDrawer } from '@/components/purchase/MpesaPurchaseDrawer'
 import { SiteFooter } from '@/components/SiteFooter'
+import { CharacterBriefSection } from '@/components/look/CharacterBriefSection'
 
 /* ─── Scroll-reveal wrapper ─────────────────────────────────────────────── */
 function Reveal({
@@ -325,6 +326,16 @@ export function LookSpread({ lookEntry }: LookSpreadProps) {
           </div>
         </div>
       </section>
+
+      {/* ═══════════════════════════════════════════════════════════════
+          CHARACTER — Anime / cosplay inspiration (only on char looks)
+      ═══════════════════════════════════════════════════════════════ */}
+      {editorialStory.characterInspiration && (
+        <CharacterBriefSection
+          inspiration={editorialStory.characterInspiration}
+          lookNum={lookNum}
+        />
+      )}
 
       {/* ═══════════════════════════════════════════════════════════════
           SPECS — Fabric, construction, measurements

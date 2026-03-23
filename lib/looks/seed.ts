@@ -469,6 +469,91 @@ export const seedLooks: LookEntry[] = [
     },
   },
 
+  /* ── 011 · CHARACTER LOOK — Ghost Meridian ─────────────────────────── */
+  {
+    lookId: 'look-011-ghost-meridian',
+    lookSlug: 'ghost-meridian',
+    lookTitle: 'Ghost Meridian',
+    season: 'AW',
+    year: 2026,
+    heroImageUrl:
+      'https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=1400&q=90&auto=format&fit=crop',
+    heroImageAlt:
+      'Structured graphite stand-collar jacket and tapered trouser on a Westlands rooftop at night — Ghost in the Shell silhouette through Kenyan craft',
+    priceKES: 67000,
+    availableUnits: 2,
+    status: 'published',
+    publishedAt: '2026-03-30T08:00:00Z',
+    editorialStory: {
+      lookTitle: 'Ghost Meridian',
+      season: 'AW',
+      year: 2026,
+      pullQuote: 'Her silhouette appeared at the edge of Westlands and stayed — present, unreadable, decisive.',
+      narrativeBody:
+        'The character who moves through the city as if she owns its data has always been dressed better than anyone else in the room.\n\nMotoko Kusanagi. The Ghost. The shell that carries more information than the city can process. Her silhouette — upright, structured, minimal — is not fashion. It is identification. The body has been decided. The rest is operational.\n\nGhost Meridian takes that logic and rebuilds it in Kenyan craft. The jacket is structured at the shoulder, stands at the collar, closes at the front with no visible hardware. Five concealed magnetic closures. The silhouette is the information. Everything else is noise.\n\nPhotographed on a Westlands rooftop at night — the city grid behind, the pressed charcoal twill absorbing and emitting in equal measure — the look asks the same question Kusanagi asked in 1989 and every cyberpunk narrative since: where does the person end and the construct begin?\n\nIn this case: at the seam. The bonded technical trouser tapers to a deliberate stop at the ankle. There is no hem, only an intention.\n\nGhost Meridian is a Look for the person who moves through the city\'s information landscape with purpose and leaves no trace except the silhouette.',
+      moodKeywords: ['ghost', 'tactical', 'threshold', 'graphite', 'meridian'],
+      credits: {
+        photographer: 'Amara Osei',
+        tailor: 'Wanjiku Mwangi',
+        stylist: 'Kefilwe Nkosi',
+        model: 'Zara Muthoni',
+        location: 'Westlands Rooftop, Nairobi',
+      },
+      characterInspiration: {
+        characterName: 'Motoko Kusanagi',
+        sourceMaterial: 'Ghost in the Shell',
+        creator: 'Masamune Shirow / Mamoru Oshii',
+        year: 1995,
+        imageUrl:
+          'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=90&auto=format&fit=crop',
+        imageAlt: 'Editorial reference — architectural silhouette evoking Motoko Kusanagi',
+        characterNote:
+          'The Major carries a body that is entirely chosen — no default, no accident. Every silhouette decision is operational. The stand collar, the column line, the zero-hardware rule: these exist because they function, not because they decorate.',
+      },
+    },
+    tailorSpec: {
+      lookId: 'look-011-ghost-meridian',
+      fabricComposition: [
+        {
+          layerName: 'Shell (Jacket)',
+          materialName: 'Pressed Charcoal Twill',
+          composition: '80% Wool, 20% Nylon',
+          weightGSM: 310,
+          sourceRegion: 'Imported — Japan',
+        },
+        {
+          layerName: 'Inner Structure',
+          materialName: 'Woven Hair Canvas',
+          composition: '65% Wool, 35% Goat Hair',
+          weightGSM: 230,
+          sourceRegion: 'Imported — Italy',
+        },
+        {
+          layerName: 'Shell (Trouser)',
+          materialName: 'Bonded Technical Stretch Wool',
+          composition: '72% Wool, 28% Spandex',
+          weightGSM: 260,
+          sourceRegion: 'Imported — Japan',
+        },
+      ],
+      stitchingMethod:
+        'Channel-stitched seams on jacket exterior — no exposed stitching visible on outside surface. Trouser: flat-felled inseam, clean-finished outseam with 1.5mm edge-stitch.',
+      constructionNotes:
+        'Stand collar, 6cm height, internally boned with 3mm spiral steel stay. No lapel — pure column silhouette. 5 concealed magnetic press-stud closures down centre front. Internal channel pocket at left breast, 22×12cm. Back seam dart for shoulder-to-waist silhouette control. Trouser: extreme high rise 34cm. Ankle-tapered 20cm hem circumference.',
+      measurements: {
+        chest: 88,
+        waist: 76,
+        hip: 92,
+        shoulderWidth: 39,
+        sleeveLength: 62,
+      },
+      tailorNotes:
+        "The stand collar steel bone must be inserted after all pressing is complete — it cannot tolerate iron heat. Test all 5 magnetic closures for interference with the client's phone and devices before the final fitting. Do not use steam on the nylon-blend face — dry press only at 160°C maximum.",
+      estimatedHours: 58,
+      difficultyRating: 5,
+    },
+  },
+
   {
     lookId: 'look-010-night-latitude',
     lookSlug: 'night-latitude',
@@ -512,6 +597,99 @@ export const seedLooks: LookEntry[] = [
       measurements: { chest: 84, waist: 68, hip: 88 },
       tailorNotes: 'Charmeuse is cut-once — no second chances. Mark with chalk only, never pins through the face. Use weights to hold pattern pieces.',
       estimatedHours: 26,
+      difficultyRating: 4,
+    },
+  },
+
+  /* ── 012 · FULL COWL (Character Inspiration: Izuku Midoriya / Deku) ───────── */
+  {
+    lookId: 'look-012-full-cowl',
+    lookSlug: 'full-cowl',
+    lookTitle: 'Full Cowl',
+    season: 'SS',
+    year: 2026,
+    heroImageUrl:
+      'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=1400&q=90&auto=format&fit=crop',
+    heroImageAlt:
+      "Model in structured moss-green hooded jacket, arms outstretched, radiating coiled energy — editorial read of Midoriya's Full Cowl technique",
+    priceKES: 52000,
+    availableUnits: 3,
+    status: 'published',
+    publishedAt: '2026-04-10T08:00:00Z',
+    editorialStory: {
+      lookTitle: 'Full Cowl',
+      season: 'SS',
+      year: 2026,
+      pullQuote: 'Distribute everything. Concentrate nothing. That is how you move without breaking.',
+      narrativeBody:
+        `There is a scene in every hero's arc where they stop trying to punch through the wall and start moving like water through it.\n\nIzuku Midoriya's Full Cowl is that moment translated into physics. Instead of concentrating power in a single fist — cracking bones, burning sinew — he distributes it through his entire body at a manageable percentage. The result is not a collision. It is a flow state. All of him, at once, operative.\n\nFull Cowl the Look borrows this as a construction principle. The moss-green bonded wool-fleece jacket is built around distributed support: every seam reinforced, every panel cut to move with the shoulder blade and hip simultaneously. There is no single "strong point." The garment holds its structure across the whole body or not at all.\n\nThe elbows and cuffs are faced in a contrasting brushed charcoal wool — not decoration, but anticipation of the points that bend and load repeatedly. The hood is boned at the crown, maintaining its silhouette whether worn up or down. The matching technical trouser tapers from a wide-leg thigh to an athletic mid-ankle, achieving the exact proportion of a person prepared to move in any direction at any moment.\n\nShooting on the green hills above Ngong Road at dawn — before the city calculates itself into traffic — the Look asked the same question the character has always asked: what do you do with power when you stop being afraid of it?\n\nYou wear it. Evenly distributed. No point of failure.`,
+      moodKeywords: ['kinetic', 'moss', 'distributed', 'hero', 'Nairobi-highland'],
+      credits: {
+        photographer: 'Amara Osei',
+        tailor: 'Brian Otieno',
+        stylist: 'Kefilwe Nkosi',
+        model: 'Jabari Mwenda',
+        location: 'Ngong Hills, Nairobi',
+      },
+      characterInspiration: {
+        characterName: 'Izuku Midoriya',
+        sourceMaterial: 'My Hero Academia',
+        creator: 'Kōhei Horikoshi',
+        year: 2014,
+        imageUrl:
+          'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=90&auto=format&fit=crop',
+        imageAlt: "Editorial reference — dynamic athletic form evoking Midoriya's Full Cowl stance",
+        characterNote:
+          "Deku's breakthrough was architectural: stop treating power as a weapon and start treating it as infrastructure. The Full Cowl distributes One For All through every limb simultaneously. This Look is built on the same principle — structural support spread evenly across every panel, not concentrated at any single seam.",
+      },
+    },
+    tailorSpec: {
+      lookId: 'look-012-full-cowl',
+      fabricComposition: [
+        {
+          layerName: 'Shell (Jacket)',
+          materialName: 'Bonded Moss-Green Wool Fleece',
+          composition: '68% Wool, 22% Polyester, 10% Elastane',
+          weightGSM: 320,
+          sourceRegion: 'Imported — South Korea',
+        },
+        {
+          layerName: 'Elbow & Cuff Facing',
+          materialName: 'Brushed Charcoal Melton',
+          composition: '90% Wool, 10% Nylon',
+          weightGSM: 280,
+          sourceRegion: 'Local — Nairobi Textile Market',
+        },
+        {
+          layerName: 'Hood Boning',
+          materialName: 'Flat Steel Stay',
+          composition: '100% Steel',
+          weightGSM: 0,
+          sourceRegion: 'Imported — Germany',
+        },
+        {
+          layerName: 'Shell (Trouser)',
+          materialName: 'Technical Stretch Wool Blend',
+          composition: '74% Wool, 20% Polyester, 6% Elastane',
+          weightGSM: 240,
+          sourceRegion: 'Imported — South Korea',
+        },
+      ],
+      stitchingMethod:
+        'Flat-felled seams throughout for zero raw edges. Elbow facing is applied with edge-top-stitch at 2mm. Hood boning channel stitched at 5mm from crown seam.',
+      constructionNotes:
+        'Jacket: set-in sleeve with gusset inset at underarm for full rotational freedom. Hood bonded at crown with 4mm flat steel stay — maintains shape in all positions. Elbow pad applied to jacket sleeve, 18×10cm, rounded rectangle, with matching facing at both cuffs. Two concealed zip pockets at front hip. Trouser: wide-leg thigh tapers to 28cm ankle hem with 3cm cuff fold.',
+      measurements: {
+        chest: 96,
+        waist: 80,
+        hip: 100,
+        shoulderWidth: 44,
+        sleeveLength: 64,
+        inseam: 76,
+      },
+      tailorNotes:
+        "The bonded fleece shell cannot be repressed after the elbow facing is applied — sequence matters: construct all main seams, press, then apply facings last. The elastane content means the jacket 'breathes' slightly — account for 2–3% ease reduction over the first five wears. Pin-fit the trouser taper before cutting: the wide-to-narrow silhouette is unforgiving on the wrong hip.",
+      estimatedHours: 44,
       difficultyRating: 4,
     },
   },

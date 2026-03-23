@@ -5,6 +5,7 @@ export type ArticleCategory =
   | 'Culture'
   | 'Interview'
   | 'Field Notes'
+  | 'Character'
 
 /**
  * A single design/edit pass in the article's evolution history.

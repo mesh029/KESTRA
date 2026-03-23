@@ -83,8 +83,7 @@ function RelatedLookCard({ lookEntry }: { lookEntry: LookEntry }) {
   return (
     <Link
       href={`/looks/${lookEntry.lookSlug}`}
-      className="group flex-shrink-0 w-48 sm:w-56 overflow-hidden rounded-lg bg-surface"
-      style={{ boxShadow: '0 2px 12px rgba(0,0,0,0.08)' }}
+      className="group flex-shrink-0 w-48 sm:w-56 overflow-hidden bg-surface border border-line"
     >
       <div className="relative aspect-[3/4] bg-surface">
         {!loaded && <div className="absolute inset-0 img-skeleton" />}
@@ -124,10 +123,9 @@ function CommitLog({ article }: { article: EditorialArticle }) {
   const latestRevision = revisions[revisions.length - 1]
   return (
     <aside
-      className="rounded-xl overflow-hidden"
+      className="overflow-hidden"
       style={{
         background: '#0d0d0d',
-        boxShadow: '0 4px 24px rgba(0,0,0,0.18)',
         fontFamily: 'var(--font-mono)',
       }}
     >
@@ -359,9 +357,7 @@ export function ArticleSpread({ article, relatedLookEntries }: ArticleSpreadProp
             <CommitLog article={article} />
 
             {/* Article meta card */}
-            <div
-              className="mt-4 rounded-xl p-5 border border-line bg-surface"
-            >
+            <div className="mt-4 p-5 border border-line bg-surface">
               <p className="font-mono text-[0.44rem] uppercase tracking-[0.22em] text-muted mb-3">
                 Article record
               </p>

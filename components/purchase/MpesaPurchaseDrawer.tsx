@@ -176,7 +176,7 @@ export function MpesaPurchaseDrawer({
           >
             {/* Drag handle */}
             <div className="flex justify-center pt-3 pb-1 flex-shrink-0">
-              <div className="w-10 h-[3px] bg-mid-grey rounded-full" />
+              <div className="w-10 h-[2px] bg-mid-grey" />
             </div>
 
             {/* ── Drawer header ──────────────────────────────────────── */}

@@ -16,6 +16,29 @@ export interface LookEntry {
   status: 'published' | 'draft' | 'sold-out'
 }
 
+/**
+ * Optional character / archetype reference for Looks designed against a fictional brief.
+ * Displayed as an inverted "Character Brief" panel above the narrative body.
+ */
+export interface CharacterInspiration {
+  /** Full name of the character, e.g. 'Motoko Kusanagi' */
+  characterName: string
+  /** Work the character originates from, e.g. 'Ghost in the Shell' */
+  sourceMaterial: string
+  /** Original creator / director, e.g. 'Masamune Shirow / Mamoru Oshii' */
+  creator: string
+  /** Year of original publication or release */
+  year: number
+  /** Portrait or reference image of the character */
+  imageUrl: string
+  imageAlt: string
+  /**
+   * 1–2 sentence editorial note articulating the design logic
+   * borrowed from this character — not a synopsis of the source material.
+   */
+  characterNote: string
+}
+
 export interface EditorialStory {
   lookTitle: string
   season: string
@@ -24,6 +47,8 @@ export interface EditorialStory {
   narrativeBody: string             // 150–400 words, supports \n\n for paragraph breaks
   moodKeywords: string[]            // e.g. ['arid', 'geometric', 'sparse']
   credits: LookCredits
+  /** Present only on Character-brief Looks */
+  characterInspiration?: CharacterInspiration
 }
 
 export interface LookCredits {
