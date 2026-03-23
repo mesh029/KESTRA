@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Void-black background -->
+  <rect width="32" height="32" fill="#0a0a0a"/>
+
+  <!-- Hook ring — where the hanger sits on the rod -->
+  <circle cx="16" cy="5.5" r="2.6" fill="none" stroke="#f0ede8" stroke-width="1.5"/>
+
+  <!-- Stem from ring to shoulder junction -->
+  <line x1="16" y1="8.1" x2="16" y2="12" stroke="#f0ede8" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Left shoulder -->
+  <line x1="16" y1="12" x2="3.5" y2="24" stroke="#f0ede8" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Right shoulder -->
+  <line x1="16" y1="12" x2="28.5" y2="24" stroke="#f0ede8" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Bottom crossbar -->
+  <line x1="3.5" y1="24" x2="28.5" y2="24" stroke="#f0ede8" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
